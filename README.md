@@ -32,6 +32,11 @@ The project produces:
 - a visualization combining historical monthly running distance with a forward-looking forecast,
 - a tabular overview of forecasted monthly running distance.
 
+Example figure: 
+
+<img width="2378" height="967" alt="image" src="https://github.com/user-attachments/assets/1b93c471-772f-4a51-824f-172a6a5c49bc" />
+
+
 **Limitations and Next Steps**
 
 This analysis represents a baseline approach. Possible extensions include:
