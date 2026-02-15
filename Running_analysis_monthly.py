@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.dates as mdates
+
 
 # ===== 1) Load data (adjust path) =====
 df = pd.read_csv(
@@ -37,8 +39,17 @@ future_dates = future_periods.to_timestamp()
 
 # ===== 6) Plot =====
 plt.figure(figsize=(12, 5))
-plt.plot(monthly_dates, y, label="Actual")
-plt.plot(future_dates, y_forecast, linestyle="--", label="Forecast (linear trend)")
+
+# add marker='o' so that each month shows a dot
+plt.plot(monthly_dates, y, marker='o', label="Actual")
+plt.plot(future_dates, y_forecast, linestyle="--", marker='o', label="Forecast (linear trend)")
+
+# force to show each month
+ax = plt.gca()
+ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+
+plt.xticks(rotation=45)
 
 plt.xlabel("Month")
 plt.ylabel("Total Distance (km)")
@@ -46,9 +57,12 @@ plt.title(f"Monthly Running Distance + {FORECAST_MONTHS}-Month Forecast")
 plt.tight_layout()
 plt.legend()
 
+plt.show()
+
 # Non-blocking show (prevents the "hang until close" problem)
 plt.show(block=False)
 plt.pause(10)   # keeps the window open for 10 seconds
 plt.close()
 
 # ===== 7) Prin
+
