@@ -34,7 +34,8 @@ The project produces:
 
 Example figure: 
 
-<img width="2378" height="967" alt="image" src="https://github.com/user-attachments/assets/1b93c471-772f-4a51-824f-172a6a5c49bc" />
+<img width="2364" height="954" alt="image" src="https://github.com/user-attachments/assets/cb164c3f-6cb4-44c3-9a03-94d3c639e71d" />
+
 
 
 **Limitations and Next Steps**
